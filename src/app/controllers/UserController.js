@@ -13,11 +13,6 @@ class UserContoller {
 
         return res.json({ id, name, email, provider });
     }
-
-    async getAll(req, res) {
-        const users = await User.findAll();
-        return res.json(users);
-    }
 }
 
 export default new UserContoller();
